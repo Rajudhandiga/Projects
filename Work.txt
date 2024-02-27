@@ -1,0 +1,35 @@
+
+Service Provider
+
+View All Uploaded Tweet Details,
+View All Tweets Recommended,
+View All Tweets Reviews,
+View All Positive Sentiment Reviews,
+View All Negative Sentiment Reviews,
+View Neutral Sentiment Reviews,
+View All Remote Users,
+View All Trending Tweets, 
+View Social Hotspot, 
+View all Rating Results,
+View All Dislike Results,
+View All Like Results,
+
+
+Remote User
+REGISTER AND LOGIN,
+ADD TWEET,
+VIEW ALL UPLOADED TWEETS,
+VIEW ALL TWEET REVIEWS,
+VIEW TRENDING PRODCUTS,
+VIEW YOUR PROFILE,
+VIEW ALL TWEET RECOMMENDED,
+
+
+
+Members
+
+ Tweet Name, Tweet Desc,  Tweet Source,  Tweet Category,  Tweet Source(Reference),  Tweet Uses,
+ Uploaded Date,Give Your Ratings,  Like,  Dislike,  Recommend,
+
+
+

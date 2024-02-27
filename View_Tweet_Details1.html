@@ -1,0 +1,119 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			input{
+			font-family:'Russo One', sans-serif;
+			font-size:15px;
+			}
+
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+        .style2 {color: #FF0000}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1"><marquee behavior="alternate"">
+							VIEW SOCIAL HOTSPOT DETAILS
+							</marquee></p>
+                            <hr>
+ 					<div class="userdetails">
+
+
+                        <form role="form" method="POST" >
+						{% csrf_token %}
+
+                          <span class="style1">SELECT TOP HOT SPOTS(GREATER THAN)::</span>
+                          <select name="stype">
+											<option>--- Select ---</option>
+                                          <option>2</option>
+                                          <option>4</option>
+                                          <option>6</option>
+                                          <option>8</option>
+										  <option>10</option>
+										  <option>12</option>
+                                          <option>14</option>
+                                          <option>16</option>
+                                          <option>18</option>
+                                          <option>20</option>
+
+                      </select>
+
+                          <input name="submit" type="submit" class="style1">
+                    </form>
+                  <br>
+				 <br>
+
+
+                    <table border="10" bordercolor="#FF00FF">
+                                    <tr>
+
+                                    <th width="176" bgcolor="#FFFF00" style="color:red; font-size:20px; font-family:fantasy">Tweet Creator</th>
+                                   <th width="181" bgcolor="#FFFF00" style="color:red; font-size:20px; font-family:fantasy" >Tweet Name</th>
+                                    <th width="187" bgcolor="#FFFF00" style="color:red; font-size:20px; font-family:fantasy" >Tweet Desc</th>
+                                    <th width="198" bgcolor="#FFFF00" style="color:red; font-size:20px; font-family:fantasy" >Tweet Source</th>
+                                         <th width="176" bgcolor="#FFFF00" style="color:red; font-size:20px; font-family:fantasy"><strong>LIKE SCORE(HOT SPOT)</strong></th>
+                                         <th width="165" bgcolor="#FFFF00" style="color:red; font-size:20px; font-family:fantasy" >Tweet Category</th>
+                                        <th width="187" bgcolor="#FFFF00" style="color:red; font-size:20px; font-family:fantasy">Reference</th>
+                                         <th width="187" bgcolor="#FFFF00" style="color:red; font-size:20px; font-family:fantasy">Tweet Uses</th>
+                                        <th width="143" bgcolor="#FFFF00" style="color:red; font-size:20px; font-family:fantasy"><strong>Created Date</strong></th>
+
+
+
+                                    </tr>
+ {% for object in list_objects %}
+
+                                    <tr>
+                                        <td style="font-family:monospace; font-size:19px; "><div align="center" class="style2">{{object.uname}}</div></td>
+                                          <td style="color:red; font-size:25px; font-family:fantasy" ><div align="center" class="style2">{{object.names}}</div></td>
+                                        <td style="font-family:monospace; font-size:19px; "><div align="center" class="style2">{{object.p_desc}}</div></td>
+                                        <td style="font-family:monospace; font-size:19px;  "><div align="center" class="style2">{{object.p_price}}</div></td>
+                                        <td bgcolor="#FF0000" ><div align="center">{{object.likes}}</div></td>
+                                        <td style="font-family:monospace; font-size:19px; "><div align="center" class="style2">{{object.pcat}}</div></td>
+                                        <td style="font-family:monospace; font-size:19px; "><div align="center" class="style2">{{object.c_name}}</div></td>
+                                         <td style="font-family:monospace; font-size:19px; "><div align="center" class="style2">{{object.p_uses}}</div></td>
+                                        <td style="font-family:monospace; font-size:19px; "><div align="center">{{object.DT}}</div></td>
+
+                                       
+
+                                        
+                                  </tr>
+
+                                        {% endfor %}
+                      </table>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
